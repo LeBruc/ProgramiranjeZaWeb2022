@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styling.css' %}">
+</head>
+
+<body>
+    <h1>Homepage</h1>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/main">Homepage</a></li>
+            <li><a href="/main/redatelj">Redatelj</a></li>
+            <li><a href="/main/glumac">Glumac</a></li>
+            <li><a href="/main/studio">Studio</a></li>
+            <li><a href="/main/osoblje">Osoblje</a></li>
+            <li><a href="/main/reklama">Reklama</a></li>
+            <li><a href="/main/film">Film</a></li>
+            <li><a href="/main/serija">Serija</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>

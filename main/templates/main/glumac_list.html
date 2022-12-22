@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2>Glumci</h2>
+<br>
+
+{% for glumac in glumac_list %}
+    <div class="glumci">
+        <h4>{{ glumac.glumac_ime }}</h4>
+        Prezime: {{glumac.glumac_prezime}}<br>
+        Datum rodenja: {{glumac.glumac_datum_rodenja}}<br>
+    </div>
+
+{% endfor %}
+{% endblock %}

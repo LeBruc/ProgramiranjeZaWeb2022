@@ -1,0 +1,43 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2>Serije</h2>
+<br>
+
+{% for serija in serija_list %}
+    <div class="serija">
+        <h4>{{ serija.serija_ime }}</h4>
+        Datum objave: {{serija.serija_datum_objave}}<br>
+        Zanr: {{serija.serija_zanr}}<br>
+        Ocjena: {{serija.serija_ocjena}}<br>
+        Budzet: {{serija.serija_budzet}}<br>
+        Drzava proizvodnje: {{serija.serija_drzava_proizvodnje}}<br>
+
+
+        Redatelj: {{serija.redatelj}}<br>
+        Studio: {{serija.studio}}<br>
+        Reklama: {{serija.reklama}}<br>
+
+        Glumci:
+            <ul>
+            {% for glumac in object_list %}
+
+                <li>{{ glumac_ime }}</li>
+            {% empty %}
+                <li>Sorry</li>  
+            {% endfor %}
+            </ul>
+            
+            Osoblje:
+            <ul>
+                {% for osoblje in object_list %}
+                    <li>{{ osoblje_ime }}</li>
+                {% empty %}
+                    <li>Sorry</li>
+                {% endfor %}
+                </ul>
+        
+    </div>
+
+{% endfor %}
+{% endblock %}

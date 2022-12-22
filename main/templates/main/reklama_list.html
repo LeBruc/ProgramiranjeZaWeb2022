@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2>Reklame</h2>
+<br>
+
+{% for reklama in reklama_list %}
+    <div class="reklama">
+        <h4>{{ reklama.reklama_izdavac }}</h4>
+        Trajanje: {{reklama.reklama_trajanje}}<br>
+        
+    </div>
+
+{% endfor %}
+{% endblock %}

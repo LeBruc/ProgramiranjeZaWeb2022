@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2>Studio</h2>
+<br>
+
+{% for studio in studio_list %}
+    <div class="studio">
+        <h4>{{ studio.studio_ime }}</h4>
+        Datum osnivanja: {{studio.datum_osnivanja}}<br>
+    </div>
+
+{% endfor %}
+{% endblock %}

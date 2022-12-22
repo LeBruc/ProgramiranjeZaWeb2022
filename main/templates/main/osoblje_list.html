@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2>Osoblje</h2>
+<br>
+
+{% for osoblje in osoblje_list %}
+    <div class="osoblje">
+        <h4>{{ osoblje.osoblje_ime }}</h4>
+        Prezime: {{osoblje.osoblje_prezime}}<br>
+        Osoblje uloga: {{osoblje.osoblje_uloga}}<br>
+    </div>
+
+{% endfor %}
+{% endblock %}

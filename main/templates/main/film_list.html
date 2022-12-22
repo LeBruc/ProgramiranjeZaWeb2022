@@ -1,0 +1,46 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2>Filmovi</h2>
+<br>
+
+{% for film in film_list %}
+    <div class="film">
+        <h4>{{ film.film_ime }}</h4>
+        Datum objave: {{film.film_datum_objave}}<br>
+        Zanr: {{film.film_zanr}}<br>
+        Ocjena: {{film.film_ocjena}}<br>
+        Budzet: {{film.film_budzet}}<br>
+        Drzava proizvodnje: {{film.film_drzava_proizvodnje}}<br>
+
+        Redatelj: {{film.redatelj}}<br>
+        Studio: {{film.studio}}<br>
+        Reklama: {{film.reklama}}<br>
+
+
+        Glumci:
+            <ul>
+            {% for glumac in object_list %}
+
+                <li>{{ glumac_ime }}</li>
+            {% empty %}
+                <li>Sorry</li>  
+            {% endfor %}
+            </ul>
+                
+            
+            Osoblje:
+            <ul>
+                {% for osoblje in object_list %}
+                    <li>{{ osoblje_ime }}</li>
+                {% empty %}
+                    <li>Sorry</li>
+                {% endfor %}
+                </ul>
+                
+        
+        
+    </div>
+
+{% endfor %}
+{% endblock %}

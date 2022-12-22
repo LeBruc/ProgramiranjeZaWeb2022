@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<br>
+<h2>Redatelji</h2>
+<br>
+
+{% for redatelj in redatelj_list %}
+    <div class="redatelj">
+        <h4>{{ redatelj.redatelj_ime }}</h4>
+        Prezime: {{redatelj.redatelj_prezime}}<br>
+        Datum rodenja: {{redatelj.redatelj_datum_rodenja}}<br>
+    </div>
+
+{% endfor %}
+{% endblock %}
