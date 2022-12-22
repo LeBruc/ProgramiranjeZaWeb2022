@@ -2,4 +2,4 @@
 Prošlogodišnja tema
 Zadatak: filmovi i serije
 
-Radio: Bruno Bosiljevac
+Izradio: Bruno Bosiljevac
